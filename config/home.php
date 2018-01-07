@@ -4,29 +4,40 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | Home links
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application. This value is used when the
-    | framework needs to place the application's name in a notification or
-    | any other location as required by the application or its packages.
+    | This value is the home links of your application. This value is used
+    | when the application needs links on the application's nav bar. Is
+    | an array where key is the `link` and the value is the `name`.
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'links' => [
+        'Laravel Zero' => 'http://laravel-zero.com',
+        'Collision' => 'https://github.com/nunomaduro/collision',
+    ],
 
     /*
     |--------------------------------------------------------------------------
-    | Application Environment
+    | Home card
     |--------------------------------------------------------------------------
     |
-    | This value determines the "environment" your application is currently
-    | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Set this in your ".env" file.
+    | This value determines the home "card" your application is currently
+    | using. This should specify the product/service/person. Take some
+    | time to provided a good image and description of your site.
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'card' => [
+        'image' => 'https://pbs.twimg.com/profile_images/912072869475123200/brsEWtmh_400x400.jpg',
+        'title' => 'Nuno Maduro',
+        'body' => 'Nuno Maduro is a Master in Computer Science, Software Engineer and Web Developer.',
+        'tags' => [
+            'php',
+            'laravel'
+        ]
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -95,6 +106,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Encryption Key
+    |--------------------------------------------------------------------------
+    |
+    | This key is used by the Illuminate encrypter service and should be set
+    | to a random, 32 character string, otherwise these encrypted strings
+    | will not be safe. Please do this before deploying an application!
+    |
+    */
+
+    'key' => env('APP_KEY'),
+
+    'cipher' => 'AES-256-CBC',
+
+    /*
+    |--------------------------------------------------------------------------
     | Logging Configuration
     |--------------------------------------------------------------------------
     |
@@ -126,16 +152,42 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Illuminate\Auth\AuthServiceProvider::class,
+        Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Illuminate\Filesystem\FilesystemServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Queue\QueueServiceProvider::class,
-        Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Illuminate\Cookie\CookieServiceProvider::class,
+        Illuminate\Database\DatabaseServiceProvider::class,
+        Illuminate\Encryption\EncryptionServiceProvider::class,
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+        Illuminate\Hashing\HashServiceProvider::class,
+        Illuminate\Mail\MailServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
+        Illuminate\Pagination\PaginationServiceProvider::class,
+        Illuminate\Pipeline\PipelineServiceProvider::class,
+        Illuminate\Queue\QueueServiceProvider::class,
+        Illuminate\Redis\RedisServiceProvider::class,
+        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+        Illuminate\Session\SessionServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
+        Illuminate\Validation\ValidationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+
+        /*
+         * Package Service Providers...
+         */
+
         /*
          * Application Service Providers...
          */
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
     ],
 
     /*
@@ -184,6 +236,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
     ],
 
 ];
