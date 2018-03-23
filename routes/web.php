@@ -11,4 +11,14 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'PostsController@index')->name('posts.index');
+
+Route::get('/talks', 'TalksController@index')->name('talks.index');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/newsletter', function () {
+    return view('newsletter');
+})->name('newsletter');

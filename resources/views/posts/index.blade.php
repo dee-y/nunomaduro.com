@@ -1,9 +1,13 @@
 @extends('layout.master')
 
+@section('heading', 'Nuno Maduro')
+
+@section('subheading', 'Web Developer. Laravel. Be passionate.')
+
 @section('content')
     @foreach ($posts as $post)
         <div class="post-preview">
-            <a href="{{ $post->url }}">
+            <a href="{{ $post->url }}" target="_blank">
                 <h2 class="post-title">
                     {{ $post->title }}
                 </h2>
@@ -13,7 +17,7 @@
             </a>
             <p class="post-meta">Posted in
                 <a href="#">Medium</a>
-                on {{$posts[0]->publishedAt}}
+                on {{ $post->published_at }}
             </p>
         </div>
         <hr>
