@@ -17,7 +17,7 @@ class CreateTalksTable extends Migration
         Schema::create('talks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('place');
             $table->string('youtube_src')->nullable();;
             $table->string('speakersdeck_src')->nullable();
