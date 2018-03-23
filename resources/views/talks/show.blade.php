@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h2 class="section-heading">{{ $talk->title }}</h2>
+    <h2 class="section-heading text-center">{{ $talk->title }}</h2>
     <a href="#">
         <iframe width="100%" height="315" src="{{ $talk->youtube_src }}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </a>
