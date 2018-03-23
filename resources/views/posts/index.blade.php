@@ -17,7 +17,7 @@
             </a>
             <p class="post-meta">Posted in
                 <a href="#">Medium</a>
-                on {{ $post->published_at }}
+                on {{ $post->published_at->format('Y-m-d') }}
             </p>
         </div>
         <hr>
