@@ -19,9 +19,9 @@ class CreateTalksTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('place');
-            $table->string('youtube_src')->nullable();
-            $table->string('twitter_src')->nullable();;
-            $table->string('speakersdeck_src')->nullable();
+            $table->longText('youtube_src')->nullable();
+            $table->longText('twitter_src')->nullable();;
+            $table->longText('speakersdeck_src')->nullable();
             $table->timestamps();
         });
 
