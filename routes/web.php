@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PostsController@index')->name('posts.index');
-Route::resource('talks', 'talksController');
+Route::resource('talks', 'TalksController');
 
 Route::get('about', function () {
     return view('about');

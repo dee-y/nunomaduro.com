@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Talk;
 use App\Http\Requests\TalkRequest;
-use Illuminate\Auth\Middleware\Authenticate;
 use App\Contracts\Repositories\TalksRepositoryContract;
 
 class TalksController extends Controller
