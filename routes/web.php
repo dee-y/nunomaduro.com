@@ -12,13 +12,14 @@
 */
 
 Route::get('/', 'PostsController@index')->name('posts.index');
+Route::resource('talks', 'talksController');
 
-Route::get('/talks', 'TalksController@index')->name('talks.index');
-
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/newsletter', function () {
+Route::get('newsletter', function () {
     return view('newsletter');
 })->name('newsletter');
+
+Auth::routes();

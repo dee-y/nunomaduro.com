@@ -5,8 +5,14 @@
 @section('subheading', 'You must expose yourself to criticism.')
 
 @section('content')
+
     @foreach ($talks as $talk)
-        @include('talks.show', ['talk' => $talk])
+        @include('talks.partials.show', ['talk' => $talk])
         <hr>
     @endforeach
+
+    @auth
+        <a class="btn btn-primary btn-lg btn-block" href="{{ route('talks.create') }}" role="button">Create</a>
+    @endauth
+
 @endsection
