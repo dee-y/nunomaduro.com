@@ -2,7 +2,7 @@
 
 @section('heading', 'Nuno Maduro')
 
-@section('subheading', 'Web Developer. Laravel. Be passionate.')
+@section('subheading', 'Web Developer. Laravel.')
 
 @section('content')
     @foreach ($posts as $post)
