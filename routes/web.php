@@ -13,13 +13,9 @@
 
 Route::get('/', 'PostsController@index')->name('posts.index');
 Route::resource('talks', 'TalksController');
+Auth::routes();
 
 Route::get('about', function () {
     return view('about');
 })->name('about');
 
-Route::get('newsletter', function () {
-    return view('newsletter');
-})->name('newsletter');
-
-Auth::routes();
