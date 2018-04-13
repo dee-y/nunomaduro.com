@@ -29,5 +29,7 @@
         <!-- JavaScript -->
         <script src="{{ mix('js/app.js') }}"></script>
 
+        <!-- Mailchimp -->
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d5f11957aceb28cf3e4c30788/719bd79ae59895236986e773a.js");</script>
     </body>
 </html>
