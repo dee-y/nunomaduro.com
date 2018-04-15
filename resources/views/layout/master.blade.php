@@ -6,7 +6,7 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.title', 'Nuno Maduro - Personal website') }}</title>
+        <title>{{ config('app.title', 'Nuno Maduro') }}</title>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
