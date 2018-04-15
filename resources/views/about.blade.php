@@ -4,6 +4,8 @@
 
 @section('subheading', 'Be passionate.')
 
+@section('background_image', url('/pics/about.jpg'))
+
 @section('content')
 
     <p>
