@@ -9,12 +9,8 @@
 @section('content')
 
     @foreach ($talks as $talk)
-        @include('talks.partials.show', ['talk' => $talk])
+        {!! $talk !!}
         <hr>
     @endforeach
-
-    @auth
-        <a class="btn btn-primary btn-lg btn-block" href="{{ route('talks.create') }}" role="button">Create</a>
-    @endauth
 
 @endsection

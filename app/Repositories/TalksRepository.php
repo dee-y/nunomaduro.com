@@ -3,34 +3,26 @@
 namespace App\Repositories;
 
 use App\Talk;
+use League\CommonMark\Converter;
 use Illuminate\Support\Collection;
+use League\CommonMark\CommonMarkConverter;
+use Illuminate\Contracts\Filesystem\Filesystem;
 use App\Contracts\Repositories\TalksRepositoryContract;
 
 class TalksRepository implements TalksRepositoryContract
 {
+    private $converter;
+
+    public function __construct(Converter $converter, Filesystem $files)
+    {
+        $this->converter = $converter;
+        $this->files = $files;
+    }
+
     public function all(): Collection
     {
-        return Talk::all();
-    }
-
-    public function get(int $id): Talk
-    {
-        return Talk::find($id);
-    }
-
-    public function create(array $attributes): Talk
-    {
-        return Talk::create($attributes);
-    }
-
-    public function update(int $id, array $attributes): Talk
-    {
-        return tap(Talk::find($id))->update($attributes);
-    }
-
-    public function delete(int $id): bool
-    {
-        return Talk::find($id)
-            ->delete();
+        return collect(array_map(function($talk) {
+            return $this->converter->convertToHtml($this->files->get($talk));
+        }, $this->files->files('talks')))->sort();
     }
 }

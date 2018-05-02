@@ -7,16 +7,9 @@ use App\Contracts\Repositories\PostsRepositoryContract;
 
 class PostsController extends Controller
 {
-    private $postsRepository;
-
-    public function __construct(PostsRepositoryContract $postsRepository)
+    public function index(PostsRepositoryContract $postsRepository)
     {
-        $this->postsRepository = $postsRepository;
-    }
-
-    public function index()
-    {
-        $posts = $this->postsRepository->all();
+        $posts = $postsRepository->all();
 
         return view('posts.index', compact('posts'));
     }
