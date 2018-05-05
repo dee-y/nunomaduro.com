@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('@yield('background_image', url('/pics/blog.jpg'))')">
+<header class="masthead" style="background-image: url('@yield('background_image', url('/pics/about.jpg'))')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

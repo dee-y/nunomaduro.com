@@ -12,6 +12,9 @@
                     <a class="nav-link" href="{{ route('posts.index') }}">Blog</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('projects.index') }}">Open Source</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('talks.index') }}">Talks</a>
                 </li>
                 <li class="nav-item">

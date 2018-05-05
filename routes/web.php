@@ -12,10 +12,8 @@
 */
 
 Route::get('/', 'PostsController@index')->name('posts.index');
-Route::resource('talks', 'TalksController');
-Auth::routes();
+Route::get('/talks', 'TalksController@index')->name('talks.index');
+Route::get('/open-source', 'ProjectsController@index')->name('projects.index');
 
-Route::get('about', function () {
-    return view('about');
-})->name('about');
+Route::view('about', 'about')->name('about');
 
