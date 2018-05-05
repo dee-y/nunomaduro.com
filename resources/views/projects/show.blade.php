@@ -3,6 +3,6 @@
     <h5 class="card-title">{{ $project->name }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{ $project->stargazers_count }} ✨</h6>
     <p class="card-text"><small>{{ $project->description }}</small></p>
-    <small><a href="{{ $project->home_url }}">Github</a></small>
+    <a class="btn btn-sm" href="{{ $project->home_url }}"><small>Github</small></a>
   </div>
 </div>
