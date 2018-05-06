@@ -18,6 +18,9 @@
                     <a class="nav-link" href="{{ route('talks.index') }}">Talks</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('newsletter-subscribers.create') }}">Newsletter</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">About</a>
                 </li>
             </ul>

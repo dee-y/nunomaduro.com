@@ -9,15 +9,16 @@
 @section('content')
 
     <p>
-        I am web developer enthusiast from Paris, France. I’m devoted to working with web development implementations,
-        analysis and modeling, and solving challenging problems.
+        I am the creator of <a href="https://laravel-zero.com" target="_blank">Laravel Zero</a> and <a
+                href="https://laravel-news.com/collision" target="_blank">Collision</a>, Web Developer at <a href="https://www.alumnforce.com" target="_blank">AlumnForce</a>, <a href="https://laravel.com" target="_blank">Laravel</a> evangelist, open source enthusiast and host on <a href="https://laravel.pt" target="_blank">Laravel Portugal</a>.
     </p>
 
     <p>
-        I am also the creator and maintainer of <a href="https://laravel-zero.com">Laravel Zero</a>, <a
-                href="https://laravel-news.com/collision">Collision</a> and many
-        other packages. Currently, I am Web Developer at Alumnforce, a startup which builds a social network for
-        students.
+        You can find me on <a href="https://twitter.com/enunomaduro" target="_blank">Twitter</a>, <a href="https://www.instagram.com/enunomaduro" target="_blank">Instagram</a>, and <a href="https://medium.com/@nunomaduro" target="_blank">Medium</a>. Or <a href="mailto:enunomaduro@gmail.com">write an email</a>.
+    </p>
+    <p>
+        I am living <strong>Paris, France</strong>. I’m devoted to working with web development implementations,
+        analysis and modeling, and solving challenging problems.
     </p>
 
     <p>

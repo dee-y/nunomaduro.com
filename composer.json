@@ -16,7 +16,8 @@
         "spatie/laravel-csp": "^1.2",
         "spatie/laravel-newsletter": "^4.2",
         "spatie/laravel-responsecache": "^4.4",
-        "spatie/packagist-api": "^1.0"
+        "spatie/packagist-api": "^1.0",
+        "uxweb/sweet-alert": "^1.4"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

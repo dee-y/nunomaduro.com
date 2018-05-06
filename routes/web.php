@@ -15,5 +15,8 @@ Route::get('/', 'PostsController@index')->name('posts.index');
 Route::get('/talks', 'TalksController@index')->name('talks.index');
 Route::get('/open-source', 'ProjectsController@index')->name('projects.index');
 
+Route::get('/newsletter', 'NewsletterSubscribersController@create')->name('newsletter-subscribers.create');
+Route::post('/newsletter', 'NewsletterSubscribersController@store')->name('newsletter-subscribers.store');
+
 Route::view('about', 'about')->name('about');
 
