@@ -13,11 +13,11 @@
     </p>
 
     <p>
-        If you find the work I do for the PHP community valuable then you can show your appreciation by supporting me here on <a href="https://www.patreon.com/nunomaduro">Patreon</a> or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L">Paypal</a>.
+        If you find the work I do for the PHP community valuable then you can show your appreciation by supporting me here on <a href="https://www.patreon.com/nunomaduro" target="_blank">Patreon</a> or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L" target="_blank">Paypal</a>.
     </p>
 
     <p>
-        Below there is selection of open source projects I've authored or actively contributed to. There's a bigger list on my <a href="https://github.com/nunomaduro">GitHub profile</a>.
+        Below there is selection of open source projects I've authored or actively contributed to. There's a bigger list on my <a href="https://github.com/nunomaduro" target="_blank">GitHub profile</a>.
     </p>
 
     <div class="row">
