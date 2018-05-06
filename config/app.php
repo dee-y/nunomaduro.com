@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\PackagistServiceProvider::class,
+        App\Providers\SeoServiceProvider::class,
     ],
 
     /*
