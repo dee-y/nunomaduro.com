@@ -5,7 +5,7 @@
 @section('subheading', 'Just a monthly newsletter.')
 
 @section('content')
-<p>Get news and announcements about my work delivered right to your inbox once per month.</p>
+<p>A free, once–monthly email round-up of news and articles about my open source projects.</p>
 <span class="caption text-muted">I'll never share your email address or spam you.</span>
 
 <form action="{{ route('newsletter-subscribers.store') }}" method="POST">
