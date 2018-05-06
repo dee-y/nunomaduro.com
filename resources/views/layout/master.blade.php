@@ -44,6 +44,16 @@
         <!-- JavaScript -->
         <script src="{{ mix('js/app.js') }}"></script>
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61404619-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-61404619-2');
+        </script>
+
         <!-- Sweet Alert -->
         <script src="{{ url('js/sweetalert.min.js') }}"></script>
         @include('sweet::alert')
