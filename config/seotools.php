@@ -42,7 +42,7 @@ return [
          * The default values to be used by the twitter cards generator.
          */
         'defaults' => [
-            'card'        => 'Nuno Maduro is the creator of Laravel Zero and Collision, Web Developer at AlumnForce, Laravel evangelist, open source enthusiast and host on Laravel Portugal.',
+            'card'        => 'summary',
             'site'        => '@enunomaduro',
         ],
     ],
