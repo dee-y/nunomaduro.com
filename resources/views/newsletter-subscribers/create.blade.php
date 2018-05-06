@@ -19,7 +19,7 @@
     </div>
     <br>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">Subscribe</button>
     </div>
 </form>
 @endsection
