@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
 use App\Contracts\Repositories\NewsletterSubscribersRepositoryContract;
 
 class NewsletterSubscribersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(DoNotCacheResponse::class);
+    }
+
     public function create()
     {
         return view('newsletter-subscribers.create');
