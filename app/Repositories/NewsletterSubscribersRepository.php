@@ -16,6 +16,6 @@ class NewsletterSubscribersRepository implements NewsletterSubscribersRepository
 
     public function create(string $email): bool
     {
-        return $this->newsletter->subscribe($email) !== false;
+        return $this->newsletter->subscribePending($email) !== false;
     }
 }
