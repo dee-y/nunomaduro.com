@@ -17,7 +17,7 @@
     </p>
 
     <p>
-        Below there is selection of Open Source projects <strong>I've authored or actively contributed to</strong>. There's a bigger list on my <a href="https://github.com/nunomaduro" target="_blank">GitHub profile</a>.
+        Below there is a selection of Open Source projects <strong>I've authored or actively contributed to</strong>. There's a bigger list on my <a href="https://github.com/nunomaduro" target="_blank">GitHub profile</a>.
     </p>
 
     <div class="row">
