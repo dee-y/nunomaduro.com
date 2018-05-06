@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Project;
 use Illuminate\Support\Str;
+use Spatie\Packagist\Packagist;
 use Illuminate\Support\Collection;
 use GrahamCampbell\GitHub\GitHubManager;
 use App\Contracts\Repositories\ProjectsRepositoryContract;
@@ -11,6 +12,8 @@ use App\Contracts\Repositories\ProjectsRepositoryContract;
 class ProjectsRepository implements ProjectsRepositoryContract
 {
     private $github;
+
+    private $packagist;
 
     private static $owner = [
         'nunomaduro',
@@ -30,9 +33,10 @@ class ProjectsRepository implements ProjectsRepositoryContract
         'homepage',
     ];
 
-    public function __construct(GitHubManager $github)
+    public function __construct(GitHubManager $github, Packagist $packagist)
     {
         $this->github = (clone $github)->user()->setPerPage(100);
+        $this->packagist = clone $packagist;
     }
 
     public function all(): Collection
@@ -45,12 +49,21 @@ class ProjectsRepository implements ProjectsRepositoryContract
             })->sortByDesc('stargazers_count')
             ->take(20)
             ->map(function($repository) {
+                $attributes = array_intersect_key($repository, array_flip(static::$attributes));
 
-                $repository['name'] = str_replace('-', ' ', Str::upper($repository['name']));
+                $attributes['name'] = str_replace('-', ' ', Str::upper($repository['name']));
 
-                return new Project(
-                    array_intersect_key($repository, array_flip(static::$attributes))
-                );
+                try {
+                    $package = $this->packagist->findPackageByName($repository['full_name']);
+                    $attributes['downloads_count'] = current($package)['downloads']['total'];
+                } catch (\Throwable $e) {
+                    $attributes['downloads_count'] = 0;
+                }
+
+                $org = explode('/', $repository['full_name'])[0];
+                $attributes['owner'] = in_array($org, static::$owner);
+
+                return new Project($attributes);
             });
     }
 

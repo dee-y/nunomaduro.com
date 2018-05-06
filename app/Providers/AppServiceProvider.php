@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(\Spatie\Packagist\Packagist::class, function () {
+            $client = new \GuzzleHttp\Client();
+
+            return new \Spatie\Packagist\Packagist($client);
+        });
     }
 }

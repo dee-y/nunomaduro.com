@@ -2,7 +2,7 @@
 
 @section('heading', 'Talks')
 
-@section('subheading', 'You must expose yourself to criticism.')
+@section('subheading', 'Expose yourself to criticism.')
 
 @section('background_image', url('/pics/talks.jpg'))
 
