@@ -6,8 +6,6 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.title', 'Nuno Maduro') }}</title>
-
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -30,6 +28,9 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ url('/favicon/ms-icon-144x144.png') }}">
         <meta name="theme-color" content="#ffffff">
+
+        <!-- SEO -->
+        {!! SEO::generate() !!}
     </head>
     <body>
 
