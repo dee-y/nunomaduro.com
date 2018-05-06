@@ -6,7 +6,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Nuno Maduro's personal website", // set false to total remove
+            'title'        => "Nuno Maduro - Website", // set false to total remove
             'description'  => 'Nuno Maduro is the creator of Laravel Zero and Collision, Web Developer at AlumnForce, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['Nuno Maduro', 'Laravel', 'Laravel Zero', 'Php', 'Open Source'],
@@ -29,7 +29,7 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => "Nuno Maduro's personal website", // set false to total remove
+            'title'       => "Nuno Maduro - Website", // set false to total remove
             'description' => 'Nuno Maduro is the creator of Laravel Zero and Collision, Web Developer at AlumnForce, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
