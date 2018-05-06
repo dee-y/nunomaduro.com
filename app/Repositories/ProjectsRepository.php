@@ -15,6 +15,11 @@ class ProjectsRepository implements ProjectsRepositoryContract
 
     private $packagist;
 
+    private static $downloadsAlias = [
+        'laravel/laravel' => 'laravel/framework',
+        'laravel-zero/laravel-zero' => 'laravel-zero/framework',
+    ];
+
     private static $owner = [
         'nunomaduro',
         'laravel-zero',
@@ -50,15 +55,8 @@ class ProjectsRepository implements ProjectsRepositoryContract
             ->take(20)
             ->map(function($repository) {
                 $attributes = array_intersect_key($repository, array_flip(static::$attributes));
-
                 $attributes['name'] = str_replace('-', ' ', Str::upper($repository['name']));
-
-                try {
-                    $package = $this->packagist->findPackageByName($repository['full_name']);
-                    $attributes['downloads_count'] = current($package)['downloads']['total'];
-                } catch (\Throwable $e) {
-                    $attributes['downloads_count'] = 0;
-                }
+                $attributes['downloads_count'] = $this->getDownloadsCount($repository['full_name']);
 
                 $org = explode('/', $repository['full_name'])[0];
                 $attributes['owner'] = in_array($org, static::$owner);
@@ -82,5 +80,19 @@ class ProjectsRepository implements ProjectsRepositoryContract
         }
 
         return $projects;
+    }
+
+    protected function getDownloadsCount(string $name): int
+    {
+        $name = static::$downloadsAlias[$name] ?? $name;
+        $downloadsCount = 0;
+        try {
+            $package = $this->packagist->findPackageByName($name);
+            $downloadsCount = current($package)['downloads']['total'];
+        } catch (\Throwable $e) {
+            //
+        }
+
+        return $downloadsCount;
     }
 }

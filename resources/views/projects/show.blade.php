@@ -12,9 +12,17 @@
         </h6>
         <p class="card-text"><small>{{ $project->description }}</small></p>
 
-        <a class="btn btn-sm" href="{{ $project->html_url }}"><small>{{ $project->stargazers_count }} Stars</small></a>
-        @if ($project->downloads_count > 500)
-        <a class="btn btn-sm" href="{{ $project->html_url }}"><small>{{ $project->downloads_count }} Donwloads</small></a>
-        @endif
+        <p>
+            <div class="row">
+                @if ($project->downloads_count > 500)
+                <div class="col-lg-6 col-md-6 mx-auto">
+                    <a class="btn btn-sm" href="{{ $project->html_url }}"><small>{{ number_format_locale($project->downloads_count) }} Downloads</small></a>
+                </div>
+                @endif
+                <div class="col-lg-6 col-md-6 mx-auto">
+                    <a class="btn btn-sm" href="{{ $project->html_url }}"><small>{{ number_format_locale($project->stargazers_count) }} Stars</small></a>
+                </div>
+            </div>
+        </p>
     </div>
 </div>
