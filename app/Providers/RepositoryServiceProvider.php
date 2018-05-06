@@ -14,11 +14,6 @@ use App\Contracts\Repositories\ProjectsRepositoryContract;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
         $this->app->singleton(PostsRepositoryContract::class, PostsRepository::class);
