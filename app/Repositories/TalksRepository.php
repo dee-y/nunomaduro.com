@@ -21,8 +21,10 @@ class TalksRepository implements TalksRepositoryContract
 
     public function all(): Collection
     {
+        $talks = collect($this->files->files('talks'))->reverse()->toArray();
+
         return collect(array_map(function($talk) {
             return $this->converter->convertToHtml($this->files->get($talk));
-        }, $this->files->files('talks')))->sort();
+        }, $talks));
     }
 }
