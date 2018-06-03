@@ -4,7 +4,7 @@
 
 @section('subheading', 'Expose yourself to criticism.')
 
-@section('background_image', url('/pics/talks.jpg'))
+@section('background_image', url('/pics/speaker.jpg'))
 
 @section('content')
     <p>
