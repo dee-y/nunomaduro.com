@@ -13,6 +13,8 @@ class TalksRepository implements TalksRepositoryContract
 {
     private $converter;
 
+    private $files;
+
     public function __construct(Converter $converter, Filesystem $files)
     {
         $this->converter = $converter;
