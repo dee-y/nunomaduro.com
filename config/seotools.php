@@ -7,7 +7,7 @@ return [
          */
         'defaults'       => [
             'title'        => "Nuno Maduro", // set false to total remove
-            'description'  => 'Nuno Maduro is the creator of Laravel Zero and Collision, Web Developer at AlumnForce, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
+            'description'  => 'Nuno Maduro is the creator of Laravel Zero and Collision, Software engineer at Algolia, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => ['Nuno Maduro', 'Laravel', 'Laravel Zero', 'Php', 'Open Source'],
             'canonical'    => false, // Set null for using Url::current(), set false to total remove
@@ -30,7 +30,7 @@ return [
          */
         'defaults' => [
             'title'       => "Nuno Maduro", // set false to total remove
-            'description' => 'Nuno Maduro is the creator of Laravel Zero and Collision, Web Developer at AlumnForce, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
+            'description' => 'Nuno Maduro is the creator of Laravel Zero and Collision, Software engineer at Algolia, Laravel evangelist, open source enthusiast and host on Laravel Portugal.', // set false to total remove
             'url'         => false, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,

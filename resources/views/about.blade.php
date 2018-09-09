@@ -10,7 +10,7 @@
 
     <p>
         I am the creator of <a href="https://laravel-zero.com" target="_blank">Laravel Zero</a> and <a
-                href="https://laravel-news.com/collision" target="_blank">Collision</a>, Web Developer at <a href="https://www.alumnforce.com" target="_blank">AlumnForce</a>, <a href="https://laravel.com" target="_blank">Laravel</a> evangelist, open source enthusiast and host on <a href="https://laravel.pt" target="_blank">Laravel Portugal</a>.
+                href="https://laravel-news.com/collision" target="_blank">Collision</a>, Software engineer at <a href="https://algolia.com" target="_blank">Algolia</a>, <a href="https://laravel.com" target="_blank">Laravel</a> evangelist, open source enthusiast and host on <a href="https://laravel.pt" target="_blank">Laravel Portugal</a>.
     </p>
 
     <p>
