@@ -31,6 +31,8 @@
 
         <!-- SEO -->
         {!! SEO::generate() !!}
+        <!-- RSS -->
+         @include('feed::links')
     </head>
     <body>
 

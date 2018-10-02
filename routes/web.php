@@ -20,3 +20,4 @@ Route::post('/newsletter', 'NewsletterSubscribersController@store')->name('newsl
 
 Route::view('about', 'about')->name('about');
 
+Route::feeds();
