@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
 use App\Contracts\Repositories\NewsletterSubscribersRepositoryContract;
 
-class NewsletterSubscribersController extends Controller
+class WritingEffectivePhpController extends Controller
 {
     public function __construct()
     {
@@ -15,20 +15,13 @@ class NewsletterSubscribersController extends Controller
 
     public function create()
     {
-        return view('newsletter-subscribers.create');
+        return \File::get(public_path() . '/writing-effective-php/index.html');
     }
 
     public function store(
         NewsletterSubscribersRepositoryContract $newslettersSubscribersRepository,
         Request $request
     ) {
-        $newslettersSubscribersRepository->create((string) $request->input('email'), 'nunomaduro.com');
-
-        alert(
-            'Please click on the link in this email to confirm your subscription.',
-            'Thanks for subscribing to my newsletter!'
-        );
-
-        return redirect(route('newsletter-subscribers.create'));
+        $newslettersSubscribersRepository->create((string) $request->input('email'), 'effective-php.com');
     }
 }

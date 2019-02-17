@@ -1,0 +1,3 @@
+[submodule "public/writing-effective-php"]
+	path = public/writing-effective-php
+	url = https://github.com/nunomaduro/writing-effective-php
