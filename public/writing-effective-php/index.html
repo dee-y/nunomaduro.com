@@ -7,13 +7,59 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-134643934-1');</script>
 </head>
 <body class="bg-grey-lightest font-sans antialiased">
-    <header class="text-center pt-10">
-        <div class="container mx-auto">
-            <form class="bg-white md:rounded-lg shadow-lg md:w-2/3 lg:w-1/2 mx-auto p-10" action="/writing-effective-php" method="POST" accept-charset="utf-8">
-                <input class="block bg-grey-lighter focus:bg-grey-light focus:border-grey text-grey-darkest text-lg rounded w-full px-5 py-4 focus:outline-focus" type="text" placeholder="Your email address">
-                <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded w-full mt-5 px-5 py-6 focus:outline-focus">Subscribe</button>
-            </form>
-        </div>
-    </header>
+<header class="text-center pt-10">
+    <div class="container mx-auto">
+        <form id="subscribe" class="bg-white md:rounded-lg shadow-lg md:w-2/3 lg:w-1/2 mx-auto p-10"
+              action="/writing-effective-php" method="POST" accept-charset="utf-8">
+            <input id="email"
+                   class="block bg-grey-lighter focus:bg-grey-light focus:border-grey text-grey-darkest text-lg rounded w-full px-5 py-4 focus:outline-focus"
+                   type="text" placeholder="Your email address">
+            <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded w-full mt-5 px-5 py-6 focus:outline-focus">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</header>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $("#subscribe").submit(function (event) {
+        event.preventDefault()
+        var email = $('#email').val()
+
+        if (email === '') {
+            Swal.fire({
+                title: "Email missing",
+                text: "Please type in you email address.",
+                type: 'error',
+                confirmButtonColor: '#8892bf',
+            })
+            return
+        }
+
+        $
+            .ajax({
+                type: "POST",
+                url: event.target.action,
+                data: {email}
+            })
+            .done(function (data) {
+                Swal.fire({
+                    title: "Response title",
+                    text: "Thank you message",
+                    type: 'success',
+                    confirmButtonColor: '#8892bf',
+                })
+                $('#email').val('')
+            })
+            .fail(function (error) {
+                Swal.fire({
+                    title: "Oh no...",
+                    text: "Please contact enunomaduro@gmail.com directly.",
+                    type: 'error',
+                })
+            })
+    });
+</script>
 </body>
 </html>
