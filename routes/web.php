@@ -21,6 +21,6 @@ Route::post('/newsletter', 'NewsletterSubscribersController@store')->name('newsl
 Route::view('about', 'about')->name('about');
 
 Route::get('/writing-effective-php', 'WritingEffectivePhpController@create')->name('writing-effective-php.create');
-Route::post('/writing-effective-php', 'WritingEffectivePhpController@store')->name('writing-effective-php.store');
+Route::post('/writing-effective-php-subscription', 'WritingEffectivePhpController@store')->name('writing-effective-php.store');
 
 Route::feeds();
