@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Spatie\ResponseCache\Middlewares\DoNotCacheResponse;
 use App\Contracts\Repositories\NewsletterSubscribersRepositoryContract;
 
-class WritingEffectivePhpController extends Controller
+class EffectivePhpController extends Controller
 {
     public function __construct()
     {
