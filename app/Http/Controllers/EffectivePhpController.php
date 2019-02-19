@@ -22,6 +22,6 @@ class EffectivePhpController extends Controller
         NewsletterSubscribersRepositoryContract $newslettersSubscribersRepository,
         Request $request
     ) {
-        $newslettersSubscribersRepository->create((string) $request->input('email'), 'effective-php.com');
+        $newslettersSubscribersRepository->create((string) $request->input('email'), 'effective-php');
     }
 }
