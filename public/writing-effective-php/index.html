@@ -1,134 +1,1562 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Writing Effective PHP</title>
-    <meta name="description" content="Sign up for free screencasts and a big discount when the course is released.">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,500,700">
-    <link rel="stylesheet" href="/writing-effective-php/style-purged.css">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@enunomaduro">
-    <meta name="twitter:title" content="Writing Effective PHP">
-    <meta name="twitter:description" content="Sign up for free screencasts and a big discount when the course is released.">
-    <meta name="twitter:image" content="/writing-effective-php/og-twitter.png">
-    <meta name="twitter:creator" content="@enunomaduro">
+    <!--Metas-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crosp Landing page Template">
+    <title>Crosp Landing page Template</title>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134643934-1"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-134643934-1');</script>
+    <!--External Stylesheets css-->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--Slick -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+
+    <!-- Magnific Popup-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <!--Template Stylesheets css-->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <script src="assets/js/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script src="assets/js/respond.min.js"></script>
+<![endif]-->
 </head>
-<body class="bg-grey-lightest font-sans antialiased">
-    <header class="text-center pt-10">
-        <div class="container mx-auto">
-            <p class="text-indigo-lighter md:text-xl font-bold uppercase tracking-wide mb-5">Announcing</p>
-            <h1 class="text-white text-2xl sm:text-4xl md:text-6xl font-bold mb-5">Writing Effective PHP</h1>
-            <h2 class="text-indigo-lightest text-lg md:text-2xl font-light mb-10 px-4 md:px-0">Frameworks change, the fundamentals of robust code don't.</h2>
-            <form id="subscribe" class="bg-white md:rounded-lg shadow-lg md:w-2/3 lg:w-1/2 mx-auto p-10"
-                  action="/effective-php" method="POST" accept-charset="utf-8">
-                <legend class="text-grey-darkest text-xl px-2 mb-5">Sign up for <b>free screencasts</b> and a <strong>big discount</strong> when the course is released.</legend>
-                <input id="email"
-                       class="block bg-grey-lighter focus:bg-grey-light focus:border-grey text-grey-darkest text-lg rounded w-full px-5 py-4 focus:outline-focus"
-                       type="text" placeholder="Your email address">
-                <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded w-full mt-5 px-5 py-6 focus:outline-focus">
-                    Subscribe
-                </button>
-            </form>
+
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+
+    <!-- Page Preloader -->
+
+    <div id="loading-page">
+        <div id="loading-center-page">
+            <div id="loading-center-absolute">
+
+                <div class="loader"></div>
+            </div>
         </div>
-    </header>
 
-    <h6 class="text-lg md:text-3xl text-center display leading-normal my-20 px-8 md:px-0">This course is designed to help <u>you</u> <br class="hidden md:block">make effective use of Modern PHP. Contains rules to get you on <br class="hidden md:block">the habit of writing robust, safe, and maintainable code.</h6>
+    </div>
+    <!-- Page Preloader -->
 
-    <section class="container text-grey-darkest text-lg leading-normal md:w-2/3 lg:w-2/5 mx-auto my-20 px-8 md:px-0">
-        <h3 class="text-xl font-medium mb-8"><strong>Writing Effective PHP</strong> is a screencast series on that will cover topics like:</h3>
-        <ul class="list-reset text-grey-darker leading-tight mb-10">
-            <li class="bullet mb-5 pl-8">Preventing bugs and vulnerabilities using defensive programming</li>
-            <li class="bullet mb-5 pl-8">Designing and creating objects</li>
-            <li class="bullet mb-5 pl-8">Improving code quality with Object Calisthenics</li>
-            <li class="bullet mb-5 pl-8">When and how to use immutability</li>
-            <li class="bullet mb-5 pl-8">Writing the public API of a class</li>
-            <li class="bullet mb-5 pl-8">Understanding Dependency Injection</li>
-            <li class="bullet mb-5 pl-8">Designing and document for inheritance</li>
-            <li class="bullet mb-5 pl-8">Composition over inheritance</li>
-            <li class="bullet mb-5 pl-8">How to write and set up high-quality tests</li>
-            <li class="bullet mb-5 pl-8">Using exceptions to improve the code reliabity</li>
-            <li>...and much more.</li>
-        </ul>
-        <p class="mb-5">PHP has evolved massively since its first days, and it's on the road to a full-featured language. However, at the same time, there is a lot of outdated information and libraries with poorly written code.</p>
-        <p class="mb-5">This course is designed to help you make effective use of Modern PHP. Sounds cool? Sign up for free screencasts and a big discount when the course is released:</p>
-        <form id="subscribe-2" class="md:flex items-center justify-start">
-            <input id="email-2" class="block bg-grey-light text-grey-darkest text-lg rounded-t md:rounded-none md:rounded-l w-full px-5 py-2 h-12 focus:outline-focus" type="text" placeholder="Your email address">
-            <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded-b md:rounded-none md:rounded-r w-full px-5 py-2 h-12 focus:outline-focus">Subscribe</button>
-        </form>
-    </section>
-    <blockquote class="container mx-auto md:w-2/3 lg:w-2/5 text-indigo-darkest text-center my-20 px-8 md:px-0">
-        <p class="text-grey-dark text-lg md:text-2xl italic leading-normal">“I can guarantee that the principles and tricks that Nuno clearly explains in this course will make you write much better code. Your colleagues and future self will you love you more.”</p>
-        <img class="inline-block grayscale border-2 border-grey-light rounded-full my-3 w-16 h-16" src="https://pbs.twimg.com/profile_images/904822634428473344/yfdNyYzz_400x400.jpg" alt="">
-        <small class="block text-grey-darker text-base"><b>Freek Van der Herten</b> <span class="font-black text-lg text-indigo-dark">/</span> <a class="text-grey-dark text-sm no-underline outline-none" href="" tabindex="-1">@freekmurze</a></small>
-    </blockquote>
+    <!-- Page Content -->
 
-    <footer class="bg-indigo-dark bg-no-repeat bg-center px-8 md:px-0">
-        <div class="container mx-auto md:w-2/3 lg:w-2/5 py-8">
-            <aside class="text-white leading-normal md:ml-32">
-                <p class="text-xl md:text-3xl font-bold mb-5">Who am I?</p>
-                <h4 class="text-lg md:text-lg font-normal mb-5"><em>Salut!</em> I'm <a class="text-white focus:outline-none" href="http://twitter.com/enunomaduro" target="_blank" tabindex="-1">@enunomaduro</a>, Software Engineer <a class="text-white focus:outline-none" href="http://twitter.com/Algolia" target="_blank" tabindex="-1">@Algolia</a>, host of <a class="text-white focus:outline-none" href="http://twitter.com/LaravelPortugal" target="_blank" tabindex="-1">@LaravelPortugal</a>, and creator of <a class="text-white focus:outline-none" href="http://twitter.com/LaravelZero" tabindex="-1">@LaravelZero</a>, Collision, Larastan, and more…</h4>
-                <small class="block text-sm text-indigo-lighter">Photo by <b>Bluecoders</b>, 2017</small>
-                <h5 class="text-indigo-lighter text-sm font-normal mt-10">Tailored by <a class="text-white font-semibold" href="http://twitter.com/caneco" target="_blank" tabindex="-1">@caneco</a></h5>
-            </aside>
+    <div class="warpper clearfix">
+
+        <!--sidebar menu-->
+
+        <a href="#menu-nav" class="menu-nav-trigger">
+            Menu 
+            <span class="menu-nav-icon"></span>
+
+            <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+                <circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+            </svg>
+        </a>
+
+        <div id="menu-nav" class="menu-nav">
+            <div class="menu-navigation-wrapper">
+                <div class="menu-half-block">
+                    <h2>Navigation</h2>
+
+                    <nav>
+                        <ul class="menu-primary-nav">
+                            <li><a href="#about" class="selected section-scroll">About</a></li>
+                            <li><a href="#features" class="section-scroll">Features</a></li>
+                            <li><a href="#video-features" class="section-scroll">Video</a></li>
+                            <li><a href="#pricing" class="section-scroll">Pricing</a></li>
+                            <li><a href="#testimonials" class="section-scroll">Testimonials</a></li>
+                            <li><a href="#contact" class="section-scroll">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu-half-block">
+                    <address>
+                        <ul class="menu-contact-info">
+                            <li><a href="mailto:">contact@contact.com</a></li>
+                            <li>+369 258 147 258</li>
+                            <li>
+                                <span>71 Amsteroum Avenue Sedney,</span>
+                                <span>NY 10243</span>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
         </div>
+        <!--sidebar menu-->
+
+        <!-- Header -->
+
+        <header class="navbar-header clearfix">
+
+            <nav class="navbar navbar-expand-lg fixed-top">
+
+                <!--container-->
+                <div class="container">
+
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""></a>
+                    <!-- Logo -->
+
+                    <!-- Get started -->
+
+                    <div class="ml-auto right-nav">
+                        <ul>
+
+                            <li>
+                                <a href="" class="btn btn-blue">Get started</a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Get started -->
+
+                </div>
+
+                <!--container-->
+            </nav>
+
+        </header>
+        <!--Header-->
+
+        <!--Begin Hero Section-->
+
+        <section id="home">
+
+            <div class="container-page  hero">
+
+                <!--container-->
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-7 col-xs-7 col-sm-7 col-12">
+
+                            <!--text-->
+
+                            <div class="hero-text">
+
+                                <h1>The interview coach in your pocket</h1>
+
+                                <p> Get daily guidance, feedback, and accountability. Build stronger interview habits in 5-minutes a day</p>
+
+                                <div class="quote-form">
+
+                                    <input type="text" name="email" class="form-control" placeholder="E-mail Adress">
+                                    <button type="submit" class="btn btn-form">Request</button>
+
+                                </div>
+
+                                <a href="#" class="icobutton icobutton-arrow btn-secttion"><img src="assets/images/icons/arrow.svg" class="hand" alt=""></a>
+
+                            </div>
+
+                            <!--text-->
+
+                        </div>
+                        <div class="col-md-5 col-xs-5 col-sm-5 col-12">
+
+                            <!-- slider image -->
+
+                            <div class="slider-image text-right">
+
+                                <img src="assets/images/image1.png" alt="">
+                                <img src="assets/images/image2.png" alt="">
+
+                            </div>
+
+                            <!-- slider image -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--container-->
+            </div>
+
+        </section>
+
+        <!-- about block colored-->
+
+        <section id="about-p" class="pd-tp-80 pd-bt-40 bg-color-1 about-text">
+
+            <!--container-->
+
+            <div class="container">
+                <div class="row">
+
+                    <!--text-->
+
+                    <div class="col-md-5 col-lg-5 col-sm-5 col-12">
+
+                        <h2>Grow your brand in the palm 
+                    of your hand</h2>
+
+                    </div>
+
+                    <!--text-->
+
+                    <!--number block-->
+
+                    <div class="col-md-6 col-lg-6 col-sm-6 offset-md-1 col-12">
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-lg-4 col-sm-4 col-12">
+
+                                <div class="icon-text">
+
+                                    <img src="assets/images/icons/favorites.svg" class="animate-icon" alt="">
+
+                                    <h3>4.2+ Rating</h3>
+                                    <span>Reviews</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-4 col-12">
+
+                                <div class="icon-text">
+
+                                    <img src="assets/images/icons/secure-shield.svg" alt="">
+
+                                    <h3>Secure</h3>
+                                    <span>Approved since 2015</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-4 col-12">
+
+                                <div class="icon-text">
+
+                                    <img src="assets/images/icons/headphones.svg" alt="">
+
+                                    <h3>Support</h3>
+                                    <span>Average 1 min response</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--number block-->
+
+                </div>
+
+            </div>
+
+            <!--container-->
+
+        </section>
+
+        <!-- about block colored-->
+
+        <!--About app-->
+
+        <section id="about">
+
+            <!--container-->
+
+            <div class="content-text bg-color padd-80">
+
+                <div class="container">
+                    <div class="row ">
+
+                        <!-- image-->
+                        <div class="col-lg-6 col-md-6 col-12 wow fadeInLeft">
+
+                            <img src="assets/images/image3.png" alt="">
+
+                        </div>
+
+                        <!--image-->
+
+                        <!-- description text-->
+
+                        <div class="col-lg-6 col-md-6 col-12 ">
+
+                            <h2 class="title-h2">Our wallet is built</h2>
+
+                            <h3>for the crypto beginner</h3>
+
+                            <p class="font-p mg-tp-30 mg-bt-30">
+
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+                            </p>
+
+                            <ul class="list-text">
+                                <li><img src="assets/images/icons/padlock.svg" alt="">
+
+                                    <p> Secure transfers with Verified Money</p>
+
+                                </li>
+                                <li><img src="assets/images/icons/credit-card.svg" alt="">
+                                    <p>Easily buy and sell things within the wallet</p>
+                                </li>
+
+                                <li><img src="assets/images/icons/investment.svg" alt="">
+                                    <p>Invest for free, forever</p>
+                                </li>
+                            </ul>
+
+                            <div class="actions-btn">
+
+                                <a href="" class="btn btn-blue"><img src="assets/images/icons/apple.svg" alt="">Get on IOS</a>
+
+                                <a href="" class="btn btn-blue"><img src="assets/images/icons/play-store.svg" alt="">Get on Android</a>
+
+                            </div>
+                        </div>
+
+                        <!-- description text-->
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--container-->
+
+        </section>
+
+        <!--Features -->
+
+        <section id="features">
+
+            <div class="padd-80">
+
+                <!--container-->
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="row-centered">
+                            <div class="col-centered col-lg-7">
+
+                                <!--text-->
+
+                                <h2 class="title-h2">Our features </h2>
+
+                                <p class="font-p mg-tp-30 mg-bt-30">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+                                </p>
+                                <!--text-->
+
+                            </div>
+
+                        </div>
+
+                        <!-- service block-->
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="service-block">
+
+                                <div class="icon-service bg-icon-1">
+
+                                    <img src="assets/images/icons/atm-card.svg" alt="">
+                                </div>
+
+                                <h3>Automatic Payouts</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- service block-->
+
+                        <!-- service block-->
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="service-block">
+                                <div class="icon-service bg-icon-2">
+                                    <img src="assets/images/icons/bars-chart.svg" alt="">
+                                </div>
+
+                                <h3>Network Effect</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- service block-->
+
+                        <!-- service block-->
+                        <div class="col-lg-4 col-md-4">
+                            <div class="service-block">
+                                <div class="icon-service bg-icon-3">
+                                    <img src="assets/images/icons/teamwork.svg" alt="">
+                                </div>
+
+                                <h3>Bigger Rewards</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <!-- service block-->
+
+                        <!-- service block-->
+
+                        <div class="col-lg-4 col-md-4 ">
+                            <div class="service-block blast-wrapper mg-bt-0">
+                                <div class="icon-service bg-icon-2">
+                                    <img src="assets/images/icons/mobile.svg" alt="">
+                                </div>
+
+                                <h3>Safe & secure</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <!-- service block-->
+
+                        <!-- service block-->
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="service-block blast-wrapper mg-bt-0">
+                                <div class="icon-service bg-icon-1">
+                                    <img src="assets/images/icons/dollar-sign.svg" alt="">
+                                </div>
+
+                                <h3>Saving transaction</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- service block-->
+
+                        <!-- service block-->
+
+                        <div class="col-lg-4 col-md-4 ">
+                            <div class="service-block   mg-bt-0">
+                                <div class="icon-service bg-icon-4">
+                                    <img src="assets/images/icons/cart.svg" alt="">
+                                </div>
+
+                                <h3>crypto gaming market</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <!-- service block-->
+
+                    </div>
+
+                </div>
+
+                <!--container-->
+
+            </div>
+        </section>
+
+        <!--Features -->
+
+        <!--Features app-->
+
+        <section id="features-app" class="bg-color padd-80">
+
+            <!--container-->
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-12">
+
+                        <!-- tabs-->
+
+                        <ul class="setps-content">
+
+                            <li data-slide="1" class="setps-content-inner step1 active">
+                                <div class="step-content-number ">
+                                    <span>1</span>
+                                </div>
+                                <div class="step-content-text">
+                                    <h3>Download the app</h3>
+                                    <p>Find us in App Store and Google Play Store.</p>
+                                </div>
+
+                            </li>
+
+                            <li data-slide="2" class="setps-content-inner step2">
+                                <div class="step-content-number">
+                                    <span>2</span>
+                                </div>
+                                <div class="step-content-text">
+                                    <h3>Take a picture</h3>
+                                    <p>Your photos will automatically sync across all your devices.</p>
+                                </div>
+
+                            </li>
+
+                            <li data-slide="3" class="setps-content-inner step3">
+                                <div class="step-content-number">
+                                    <span>3</span>
+                                </div>
+                                <div class="step-content-text">
+                                    <h3>Share!</h3>
+                                    <p>Create private group threads where you can be yourself.
+                                    </p>
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <!-- tabs-->
+
+                    </div>
+
+                    <!-- content tab-->
+
+                    <div class="col-md-4 col-sm-4 offset-md-1 offset-lg-2  col-12">
+
+                        <div class="step-content-image slider-nav text-center">
+                            <div class="step-image-inner">
+                                <img src="assets/images/image5.png" alt="">
+                            </div>
+                            <div class="step-image-inner">
+                                <img src="assets/images/image6.png" alt="">
+                            </div>
+                            <div class="step-image-inner">
+                                <img src="assets/images/image1.png" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- content tab-->
+
+                </div>
+
+            </div>
+            <!--container-->
+
+        </section>
+
+        <!--Features app -->
+
+        <!--Video -->
+
+        <section id="video-features">
+
+            <div class="container-page padd-80 video-bloc">
+                <!--container-->
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="row-centered">
+                            <div class="col-centered col-lg-6">
+
+                                <div class="text-video">
+
+                                    <div class="ply-btn video-button">
+                                        <a href="https://www.youtube.com/embed/7e90gBu4pas" class=" video-modal"> <img src="assets/images/play.svg" class="hand-video" alt=""></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--container-->
+            </div>
+
+        </section>
+
+        <!--Video -->
+
+        <!-- pricing table -->
+
+        <section id="pricing" class="padd-80 ">
+
+            <div class="container-page">
+                <!--container-->
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12">
+
+                            <!-- text -->
+
+                            <div class="text-center">
+
+                                <h2 class="title-h2">Pricing</h2>
+                                <p class="font-p mg-tp-30 mg-bt-30">
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                    <br>accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+
+                                </p>
+
+                            </div>
+
+                            <!-- text -->
+
+                            <!-- table -->
+
+                            <div class="table-price text-center clearfix col-md-12 col-lg-12 wow fadeInUpBig">
+
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#tab1" data-toggle="tab">Annually</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#tab2" data-toggle="tab" >Monthly</a>
+                                    </li>
+
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="tab1">
+                                        <div class="prinicng-container">
+                                            <div class="content-table row">
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+
+                                                    <div class="table-plan active">
+
+                                                        <h2>Startup</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br>et iusto odio </p>
+
+                                                        <div class="price">
+                                                            <div class="num"> 0$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green ">Choose Plan</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--table plan -->
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+                                                    <div class="table-plan">
+
+                                                        <h2>Professional</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br>et iusto odio </p>
+                                                        <div class="price">
+                                                            <div class="num"> 29$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green ">Choose Plan</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <!--table plan -->
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+                                                    <div class="table-plan ">
+
+                                                        <h2>Enterprise</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br>et iusto odio </p>
+                                                        <div class="price">
+                                                            <div class="num"> 99$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green ">Choose Plan</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--table plan -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2">
+                                        <div class="prinicng-container">
+
+                                            <div class="content-table row">
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+
+                                                    <div class="table-plan">
+
+                                                        <h2>Startup</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br>et iusto odio </p>
+                                                        <div class="price">
+                                                            <div class="num"> 20$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green ">Choose Plan</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--table plan -->
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+
+                                                    <div class="table-plan">
+
+                                                        <h2>Professional</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br> et iusto odio </p>
+
+                                                        <div class="price">
+                                                            <div class="num">45$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green">Choose Plan</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <!--table plan -->
+
+                                                <!--table plan -->
+
+                                                <div class="col-md-4 col-lg-4 col-xs-12">
+
+                                                    <div class="table-plan">
+
+                                                        <h2>Enterprise</h2>
+                                                        <p>At vero eos et accusamus
+                                                            <br> et iusto odio </p>
+                                                        <div class="price">
+                                                            <div class="num">85$</div>
+                                                            <div class="per">/mo</div>
+                                                        </div>
+
+                                                        <ul>
+                                                            <li>5 Email Accounts</li>
+                                                            <li>20GB storage</li>
+                                                            <li>Webmail Support</li>
+                                                        </ul>
+
+                                                        <div class="price-content-btn ">
+                                                            <a href=" " class="btn btn-green">Choose Plan</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--table plan -->
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- table -->
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--container-->
+
+            </div>
+
+        </section>
+
+        <!-- pricing table -->
+
+        <!-- testimonials -->
+
+        <section id="testimonials" class="bg-color">
+
+            <div class="container-page padd-80">
+                <!--container-->
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="row-centered">
+                            <div class="col-centered col-lg-7 col-md-7">
+
+                                <h2 class="title-h2">Testmonials</h2>
+
+                                <p class="font-p mg-tp-30 mg-bt-30">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+                                </p>
+
+                                <div class="testimonial-slider">
+
+                                    <div class="item">
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/1.jpg" alt="">
+
+                                        </div>
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+
+                                            <div class="avatar-info">
+
+                                                <h4>Kathleen Mills</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/2.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+
+                                            <div class="avatar-info">
+
+                                                <h4>Tyler Bryant</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/3.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Bruce Wong</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/4.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Jhone Dhoe</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/5.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Mark Thompsone</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/6.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Max Harris</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/7.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Lucy Kelly</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/8.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Ethan Nguyen</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item">
+
+                                        <div class="avatar-item">
+
+                                            <img src="assets/images/testimonial/9.jpg" alt="">
+
+                                        </div>
+
+                                        <div class="item-inner">
+
+                                            <p>
+                                                Nam libero tempore, cum soluta nobis est eligen di opt ios cumque nihil impedit quo minus id quo d maxime placeat facere possimus. Sed ut perspi ciatis unde omnis iste natus error sit </p>
+
+                                            <div class="rating">
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                                <span class="icon_star"></span>
+                                            </div>
+                                            <div class="avatar-info">
+
+                                                <h4>Jack Martin</h4>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- avatar images -->
+
+                                <div class="slider-avatar">
+
+                                    <div data-slide="1" class="item-image avatar1 medium-avtar">
+                                        <img src="assets/images/testimonial/1.jpg" class="hand-image" alt="">
+                                    </div>
+                                    <div data-slide="2" class="item-image avatar2 big-avtar">
+                                        <img src="assets/images/testimonial/2.jpg" class="hand-image" alt="">
+                                    </div>
+                                    <div data-slide="3" class="item-image avatar3 medium-avtar">
+                                        <img src="assets/images/testimonial/3.jpg" class="hand-image" alt="">
+                                    </div>
+                                    <div data-slide="4" class="item-image avatar4 small-avtar">
+                                        <img src="assets/images/testimonial/4.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                    <div data-slide="5" class="item-image avatar5 big-avtar">
+                                        <img src="assets/images/testimonial/5.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                    <div data-slide="6" class="item-image avatar6 medium-avtar">
+                                        <img src="assets/images/testimonial/6.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                    <div data-slide="7" class="item-image avatar7 small-avtar">
+                                        <img src="assets/images/testimonial/7.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                    <div data-slide="8" class="item-image avatar8 small-avtar">
+                                        <img src="assets/images/testimonial/8.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                    <div data-slide="9" class="item-image avatar9 big-avtar">
+                                        <img src="assets/images/testimonial/9.jpg" class="hand-image" alt="">
+                                    </div>
+
+                                </div>
+
+                                <!-- avatar images -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--container-->
+
+            </div>
+
+        </section>
+        <!-- testimonials -->
+
+        <!-- get app -->
+
+        <section id="get-app" class="bg-color-1 pd-tp-60">
+
+            <div class="container">
+                <!--container-->
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-6 col-sm-6 col-12">
+
+                        <img src="assets/images/image8.png" alt="">
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-sm-6 col-12 wow fadeInRight">
+
+                        <div class="padd-80">
+                            <h2 class="title-h2 color-white">Start training for free</h2>
+                            <p class="color-white font-p mg-tp-30 mg-bt-30 font-20">Download the ProPocket iOS app and
+                                <br>start training for your interview</p>
+
+                            <a href="" class="btn btn-white"> Get the App</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--container-->
+
+        </section>
+
+        <!-- get app -->
+
+        <!--sponsors clients-->
+
+        <section id="sponsors" class="padd-40 bg-color">
+
+            <!--container-->
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="row-centered">
+                        <div class="col-centered col-lg-12 col-md-12">
+
+                            <div class="client-slider ">
+
+                                <div class="item ">
+                                    <img src="assets/images/clients/logo1.png" class="img-responsive " alt=" " title=" ">
+
+                                </div>
+                                <div class="item ">
+                                    <img src="assets/images/clients/logo2.png" class="img-responsive " alt=" " title=" ">
+
+                                </div>
+
+                                <div class="item ">
+
+                                    <img src="assets/images/clients/logo3.png " class="img-responsive " alt=" " title=" ">
+
+                                </div>
+
+                                <div class="item ">
+                                    <img src="assets/images/clients/logo4.png" class="img-responsive " alt=" " title=" ">
+
+                                </div>
+
+                                <div class="item ">
+
+                                    <img src="assets/images/clients/logo5.png" class="img-responsive " alt=" " title=" ">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--End sponsors clients-->
+
+        <!--contact-->
+
+        <section id="contact" class=" padd-80">
+
+            <!--container-->
+            <div class="container">
+
+                <div class="contact-inner">
+
+                    <div class="row-centered">
+                        <div class="col-centered col-lg-7">
+
+                            <h2 class="title-h2">Have any question? </h2>
+
+                            <p class="font-p mg-tp-30 mg-bt-60 ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua
+
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class=" col-md-6 col-sm-6 col-lg-6 col-12">
+
+                            <div class="content-info">
+
+                                <form action="#" method="post">
+
+                                    <div class="form-group">
+
+                                        <input type="text" name="name" class="form-control" placeholder="Name">
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <input type="email" name="email" class="form-control" placeholder="Email">
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="4" cols="3" placeholder="Your message "></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-blue">Send message </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                        <div class=" col-md-6 col-sm-6 col-lg-6 col-12">
+
+                            <div class="info-icon">
+
+                                <div class="icon-contact bg-icon-4">
+
+                                    <img src="assets/images/icons/map.svg" alt="">
+                                </div>
+
+                                <div class="content-contact">
+                                    <h3>Adress</h3>
+                                    <p>71 Amsteroum Avenue Sedney, NY 10243</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="info-icon">
+
+                                <div class="icon-contact bg-icon-2">
+
+                                    <img src="assets/images/icons/phone.svg" alt="">
+                                </div>
+
+                                <div class="content-contact">
+                                    <h3>Phone</h3>
+                                    <p>+369 258 147 258
+                                        <br> +369 258 147 258</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="info-icon">
+
+                                <div class="icon-contact bg-icon-3">
+
+                                    <img src="assets/images/icons/email.svg" alt="">
+                                </div>
+
+                                <div class="content-contact">
+                                    <h3>E-mail</h3>
+                                    <p>contact@contact.com</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--container-->
+
+        </section>
+
+        <!--contact-->
+
+    </div>
+
+    <!-- Footer-->
+
+    <footer class="footer ">
+        <div class="container-page ">
+
+            <div class="footer-warpper ">
+
+                <div class="footer-top">
+                    <!--container-->
+                    <div class="container ">
+
+                        <div class="footer-top  clearfix ">
+
+                            <div class="footer-bottom-content clearfix ">
+
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-md-3">
+                                        <div class="content-footer">
+
+                                            <div class="logo-footer ">
+                                                <img src="assets/images/logo.png " alt="">
+
+                                            </div>
+                                            <div class="text-footer ">
+                                                <p>
+                                                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3">
+                                        <div class="content-footer">
+
+                                            <h5>Menu</h5>
+
+                                            <ul class="list-menu ">
+                                                <li>
+                                                    <a href=" ">About </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Features</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Video</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Princing</a>
+                                                </li>
+                                                <li>
+                                                    <a href=" ">Testmonials</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Contact</a>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3">
+                                        <div class="content-footer">
+
+                                            <h5>Useful Links</h5>
+
+                                            <ul class="list-menu ">
+                                                <li>
+                                                    <a href=" ">Terms of use </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Privacy Policy</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Help</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href=" ">Careers</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href=" ">Faq</a>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-3">
+
+                                        <div class="newsletter-block ">
+
+                                            <img src="assets/images/icons/email-1.svg" alt="">
+
+                                            <h5>Subscribe to Newsletter</h5>
+
+                                            <!-- Newsletter -->
+
+                                            <div class="subscribe-form ">
+
+                                                <form action="#" method="post" class="subscribe-mail">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control email-input" placeholder="Enter your email">
+                                                        <input type="submit" class="btn btn-green" value="Subscribe">
+                                                    </div>
+                                                    <p class="error-message"></p>
+                                                    <p class="sucess-message"></p>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- Newsletter -->
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--container-->
+                </div>
+
+            </div>
+        </div>
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+    <!--Footer -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.3.1.min.js "></script>
 
-        function subscribeEPHPNewsletter (email) {
-            if (email === '') {
-                Swal.fire({
-                    title: "Email missing",
-                    text: "Please type an email address.",
-                    type: 'error',
-                    confirmButtonColor: '#8892bf',
-                })
-                return
-            }
-
-            $
-                .ajax({
-                    type: "POST",
-                    url: event.target.action,
-                    data: {email}
-                })
-                .done(function (data) {
-                    Swal.fire({
-                        title: "Thank you!",
-                        text: "Please check your email to finish subscription.",
-                        type: 'success',
-                        confirmButtonColor: '#8892bf',
-                    })
-                    $('#email').val('')
-                    $('#email-2').val('')
-                })
-                .fail(function (error) {
-                    Swal.fire({
-                        title: "Oh no...",
-                        text: "Please contact enunomaduro@gmail.com directly.",
-                        type: 'error',
-                    })
-                })
-        }
-
-        $("#subscribe").submit(function (event) {
-            event.preventDefault()
-            var email = $('#email').val()
-            subscribeEPHPNewsletter(email)
-        });
-
-        $("#subscribe-2").submit(function (event) {
-            event.preventDefault()
-            var email = $('#email-2').val()
-            subscribeEPHPNewsletter(email)
-        });
-
-
-    </script>
+    <!-- Bootstrap Plugins -->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <script src="assets/js/jquery.easing.js "></script>
+    <script src="assets/js/wow.min.js "></script>
+    <script src="assets/js/magnific-popup.min.js "></script>
+    <script src="assets/js/jquery.scrollUp.min.js "></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js "></script>
+    <script src="assets/js/slick.min.js "></script>
+    <script src="assets/js/mo.min.js "></script>
+    <!-- Main js -->
+    <script src="assets/js/main.js "></script>
 </body>
-</html>
