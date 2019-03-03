@@ -54,8 +54,8 @@
         </ul>
         <p class="mb-5">PHP has evolved massively since its first days, and it's on the road to a full-featured language. However, at the same time, there is a lot of outdated information and libraries with poorly written code.</p>
         <p class="mb-5">This course is designed to help you make effective use of Modern PHP. Sounds cool? Sign up for free screencasts and a big discount when the course is released:</p>
-        <form class="md:flex items-center justify-start">
-            <input class="block bg-grey-light text-grey-darkest text-lg rounded-t md:rounded-none md:rounded-l w-full px-5 py-2 h-12 focus:outline-focus" type="text" placeholder="Your email address">
+        <form id="subscribe-2" class="md:flex items-center justify-start">
+            <input id="email-2" class="block bg-grey-light text-grey-darkest text-lg rounded-t md:rounded-none md:rounded-l w-full px-5 py-2 h-12 focus:outline-focus" type="text" placeholder="Your email address">
             <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded-b md:rounded-none md:rounded-r w-full px-5 py-2 h-12 focus:outline-focus">Subscribe</button>
         </form>
     </section>
@@ -79,10 +79,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $("#subscribe").submit(function (event) {
-            event.preventDefault()
-            var email = $('#email').val()
 
+        function subscribeEPHPNewsletter (email) {
             if (email === '') {
                 Swal.fire({
                     title: "Email missing",
@@ -115,7 +113,21 @@
                         type: 'error',
                     })
                 })
+        }
+
+        $("#subscribe").submit(function (event) {
+            event.preventDefault()
+            var email = $('#email').val()
+            subscribeEPHPNewsletter(email)
         });
+
+        $("#subscribe-2").submit(function (event) {
+            event.preventDefault()
+            var email = $('#email-2').val()
+            subscribeEPHPNewsletter(email)
+        });
+
+
     </script>
 </body>
 </html>
