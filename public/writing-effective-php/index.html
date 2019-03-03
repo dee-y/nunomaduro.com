@@ -2,64 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <title>Writing Effective PHP</title>
+    <meta name="description" content="Sign up for free screencasts and a big discount when the course is released.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:400,500,700">
     <link rel="stylesheet" href="/writing-effective-php/style-purged.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@enunomaduro">
+    <meta name="twitter:title" content="Writing Effective PHP">
+    <meta name="twitter:description" content="Sign up for free screencasts and a big discount when the course is released.">
+    <meta name="twitter:image" content="/writing-effective-php/og-twitter.png">
+    <meta name="twitter:creator" content="@enunomaduro">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134643934-1"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-134643934-1');</script>
 </head>
 <body class="bg-grey-lightest font-sans antialiased">
-<header class="text-center pt-10">
-    <div class="container mx-auto">
-        <form id="subscribe" class="bg-white md:rounded-lg shadow-lg md:w-2/3 lg:w-1/2 mx-auto p-10"
-              action="/effective-php" method="POST" accept-charset="utf-8">
-            <input id="email"
-                   class="block bg-grey-lighter focus:bg-grey-light focus:border-grey text-grey-darkest text-lg rounded w-full px-5 py-4 focus:outline-focus"
-                   type="text" placeholder="Your email address">
-            <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded w-full mt-5 px-5 py-6 focus:outline-focus">
-                Subscribe
-            </button>
+    <header class="text-center pt-10">
+        <div class="container mx-auto">
+            <p class="text-indigo-lighter md:text-xl font-bold uppercase tracking-wide mb-5">Announcing</p>
+            <h1 class="text-white text-2xl sm:text-4xl md:text-6xl font-bold mb-5">Writing Effective PHP</h1>
+            <h2 class="text-indigo-lightest text-lg md:text-2xl font-light mb-10 px-4 md:px-0">Frameworks change, the fundamentals of robust code don't.</h2>
+            <form id="subscribe" class="bg-white md:rounded-lg shadow-lg md:w-2/3 lg:w-1/2 mx-auto p-10"
+                  action="/effective-php" method="POST" accept-charset="utf-8">
+                <legend class="text-grey-darkest text-xl px-2 mb-5">Sign up for <b>free screencasts</b> and a <strong>big discount</strong> when the course is released.</legend>
+                <input id="email"
+                       class="block bg-grey-lighter focus:bg-grey-light focus:border-grey text-grey-darkest text-lg rounded w-full px-5 py-4 focus:outline-focus"
+                       type="text" placeholder="Your email address">
+                <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded w-full mt-5 px-5 py-6 focus:outline-focus">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <h6 class="text-lg md:text-3xl text-center display leading-normal my-20 px-8 md:px-0">This course is designed to help <u>you</u> <br class="hidden md:block">make effective use of Modern PHP. Contains rules to get you on <br class="hidden md:block">the habit of writing robust, safe, and maintainable code.</h6>
+
+    <section class="container text-grey-darkest text-lg leading-normal md:w-2/3 lg:w-2/5 mx-auto my-20 px-8 md:px-0">
+        <h3 class="text-xl font-medium mb-8"><strong>Writing Effective PHP</strong> is a screencast series on that will cover topics like:</h3>
+        <ul class="list-reset text-grey-darker leading-tight mb-10">
+            <li class="bullet mb-5 pl-8">Preventing bugs and vulnerabilities using defensive programming</li>
+            <li class="bullet mb-5 pl-8">Designing and creating objects</li>
+            <li class="bullet mb-5 pl-8">Improving code quality with Object Calisthenics</li>
+            <li class="bullet mb-5 pl-8">When and how to use immutability</li>
+            <li class="bullet mb-5 pl-8">Writing the public API of a class</li>
+            <li class="bullet mb-5 pl-8">Understanding Dependency Injection</li>
+            <li class="bullet mb-5 pl-8">Designing and document for inheritance</li>
+            <li class="bullet mb-5 pl-8">Composition over inheritance</li>
+            <li class="bullet mb-5 pl-8">How to write and set up high-quality tests</li>
+            <li class="bullet mb-5 pl-8">Using exceptions to improve the code reliabity</li>
+            <li>...and much more.</li>
+        </ul>
+        <p class="mb-5">PHP has evolved massively since its first days, and it's on the road to a full-featured language. However, at the same time, there is a lot of outdated information and libraries with poorly written code.</p>
+        <p class="mb-5">This course is designed to help you make effective use of Modern PHP. Sounds cool? Sign up for free screencasts and a big discount when the course is released:</p>
+        <form class="md:flex items-center justify-start">
+            <input class="block bg-grey-light text-grey-darkest text-lg rounded-t md:rounded-none md:rounded-l w-full px-5 py-2 h-12 focus:outline-focus" type="text" placeholder="Your email address">
+            <button class="bg-indigo focus:bg-indigo-dark text-white font-bold text-base uppercase tracking-wide rounded-b md:rounded-none md:rounded-r w-full px-5 py-2 h-12 focus:outline-focus">Subscribe</button>
         </form>
-    </div>
-</header>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $("#subscribe").submit(function (event) {
-        event.preventDefault()
-        var email = $('#email').val()
+    </section>
+    <blockquote class="container mx-auto md:w-2/3 lg:w-2/5 text-indigo-darkest text-center my-20 px-8 md:px-0">
+        <p class="text-grey-dark text-lg md:text-2xl italic leading-normal">“I can guarantee that the principles and tricks that Nuno clearly explains in this course will make you write much better code. Your colleagues and future self will you love you more.”</p>
+        <img class="inline-block grayscale border-2 border-grey-light rounded-full my-3 w-16 h-16" src="https://pbs.twimg.com/profile_images/904822634428473344/yfdNyYzz_400x400.jpg" alt="">
+        <small class="block text-grey-darker text-base"><b>Freek Van der Herten</b> <span class="font-black text-lg text-indigo-dark">/</span> <a class="text-grey-dark text-sm no-underline outline-none" href="" tabindex="-1">@freekmurze</a></small>
+    </blockquote>
 
-        if (email === '') {
-            Swal.fire({
-                title: "Email missing",
-                text: "Please type an email address.",
-                type: 'error',
-                confirmButtonColor: '#8892bf',
-            })
-            return
-        }
+    <footer class="bg-indigo-dark bg-no-repeat bg-center px-8 md:px-0">
+        <div class="container mx-auto md:w-2/3 lg:w-2/5 py-8">
+            <aside class="text-white leading-normal md:ml-32">
+                <p class="text-xl md:text-3xl font-bold mb-5">Who am I?</p>
+                <h4 class="text-lg md:text-lg font-normal mb-5"><em>Salut!</em> I'm <a class="text-white focus:outline-none" href="http://twitter.com/enunomaduro" target="_blank" tabindex="-1">@enunomaduro</a>, Software Engineer <a class="text-white focus:outline-none" href="http://twitter.com/Algolia" target="_blank" tabindex="-1">@Algolia</a>, host of <a class="text-white focus:outline-none" href="http://twitter.com/LaravelPortugal" target="_blank" tabindex="-1">@LaravelPortugal</a>, and creator of <a class="text-white focus:outline-none" href="http://twitter.com/LaravelZero" tabindex="-1">@LaravelZero</a>, Collision, Larastan, and more…</h4>
+                <small class="block text-sm text-indigo-lighter">Photo by <b>Bluecoders</b>, 2017</small>
+                <h5 class="text-indigo-lighter text-sm font-normal mt-10">Tailored by <a class="text-white font-semibold" href="http://twitter.com/caneco" target="_blank" tabindex="-1">@caneco</a></h5>
+            </aside>
+        </div>
+    </footer>
 
-        $
-            .ajax({
-                type: "POST",
-                url: event.target.action,
-                data: {email}
-            })
-            .done(function (data) {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("#subscribe").submit(function (event) {
+            event.preventDefault()
+            var email = $('#email').val()
+
+            if (email === '') {
                 Swal.fire({
-                    title: "Thank you!",
-                    text: "Please check your email to finish subscription.",
-                    type: 'success',
+                    title: "Email missing",
+                    text: "Please type an email address.",
+                    type: 'error',
                     confirmButtonColor: '#8892bf',
                 })
-                $('#email').val('')
-            })
-            .fail(function (error) {
-                Swal.fire({
-                    title: "Oh no...",
-                    text: "Please contact enunomaduro@gmail.com directly.",
-                    type: 'error',
+                return
+            }
+
+            $
+                .ajax({
+                    type: "POST",
+                    url: event.target.action,
+                    data: {email}
                 })
-            })
-    });
-</script>
+                .done(function (data) {
+                    Swal.fire({
+                        title: "Thank you!",
+                        text: "Please check your email to finish subscription.",
+                        type: 'success',
+                        confirmButtonColor: '#8892bf',
+                    })
+                    $('#email').val('')
+                })
+                .fail(function (error) {
+                    Swal.fire({
+                        title: "Oh no...",
+                        text: "Please contact enunomaduro@gmail.com directly.",
+                        type: 'error',
+                    })
+                })
+        });
+    </script>
 </body>
 </html>
