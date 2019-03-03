@@ -20,3 +20,7 @@ Route::post('/newsletter', 'NewsletterSubscribersController@store')->name('newsl
 
 Route::view('about', 'about')->name('about');
 
+Route::get('/effective-php', 'EffectivePhpController@create')->name('effective-php.create');
+Route::post('/effective-php', 'EffectivePhpController@store')->name('effective-php.store');
+
+Route::feeds();

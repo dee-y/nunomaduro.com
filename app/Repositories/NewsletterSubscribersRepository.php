@@ -14,8 +14,8 @@ class NewsletterSubscribersRepository implements NewsletterSubscribersRepository
         $this->newsletter = clone $newsletter;
     }
 
-    public function create(string $email): bool
+    public function create(string $email, string $list): bool
     {
-        return $this->newsletter->subscribePending($email) !== false;
+        return $this->newsletter->subscribePending($email, [], $list) !== false;
     }
 }

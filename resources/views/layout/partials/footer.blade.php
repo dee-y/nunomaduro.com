@@ -20,8 +20,15 @@
                             </span>
                         </a>
                     </li>
+                    <li class="list-inline-item">
+                        <a href="{{ url('feed') }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
                 </ul>
-
                 <p class="copyright text-muted">Copyright &copy; nunomaduro.com {{ date('Y') }}</p>
                 <p class="copyright text-muted"><small>This website is powered by <a href="https://laravel.com/" target="_blank">Laravel</a> and served from <a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a>. The source code is hosted on <a href="https://github.com/nunomaduro/nunomaduro.com" target="_blank">GitHub</a>.</small></p>
             </div>

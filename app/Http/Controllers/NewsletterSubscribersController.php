@@ -22,7 +22,7 @@ class NewsletterSubscribersController extends Controller
         NewsletterSubscribersRepositoryContract $newslettersSubscribersRepository,
         Request $request
     ) {
-        $newslettersSubscribersRepository->create((string) $request->input('email'));
+        $newslettersSubscribersRepository->create((string) $request->input('email'), 'nunomaduro.com');
 
         alert(
             'Please click on the link in this email to confirm your subscription.',

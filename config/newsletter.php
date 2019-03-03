@@ -34,6 +34,10 @@ return [
              */
             'id' => env('MAILCHIMP_LIST_ID'),
         ],
+
+        'effective-php' => [
+            'id' => env('MAILCHIMP_EFFECTIVE_PHP_LIST_ID')
+        ]
     ],
 
     /*

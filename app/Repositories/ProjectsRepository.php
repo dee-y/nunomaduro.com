@@ -18,6 +18,7 @@ class ProjectsRepository implements ProjectsRepositoryContract
     private static $downloadsAlias = [
         'laravel/laravel' => 'laravel/framework',
         'laravel-zero/laravel-zero' => 'laravel-zero/framework',
+        'algolia/scout-extended' => 'algolia/scout-extended',
     ];
 
     private static $owner = [

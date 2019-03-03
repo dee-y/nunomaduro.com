@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Post;
+use Spatie\Feed\FeedItem;
 use Illuminate\Support\Str;
 use Sbuckpesch\Medium\Reader;
 use Illuminate\Support\Carbon;
@@ -26,5 +27,18 @@ class PostsRepository implements PostsRepositoryContract
         }
 
         return $posts;
+    }
+
+    public static function feed(): Collection
+    {
+        return (new static)->all()->map(function ($post) {
+            return FeedItem::create()
+                ->id($post->url)
+                ->title($post->title)
+                ->summary($post->subtitle)
+                ->updated($post->published_at)
+                ->link($post->url)
+                ->author('Nuno Maduro');
+        });
     }
 }
